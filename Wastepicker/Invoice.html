@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .invoice-container {
+            background-color: #ffffff;
+            padding: 20px;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .invoice-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .invoice-header h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .invoice-details {
+            margin-bottom: 20px;
+        }
+
+        .invoice-details h2, .invoice-details p {
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .invoice-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .invoice-table th, .invoice-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .invoice-table th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+
+        .total-row {
+            font-weight: bold;
+        }
+
+        .footer-notes {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #888;
+            text-align: center;
+        }
+
+        .action-buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .action-buttons button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .action-buttons button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="invoice-container">
+    <!-- Header Section -->
+    <div class="invoice-header">
+        <div class="logo">
+            <h2>Community Recycling System</h2>
+        </div>
+        <div class="invoice-info">
+            <h1>Invoice #1001</h1>
+            <p>Date: 2024-11-02</p>
+        </div>
+    </div>
+
+    <!-- User & Ward Details -->
+    <div class="invoice-details">
+        <h2>Recipient Information</h2>
+        <p>Name: John Doe</p>
+        <p>Ward No: 12</p>
+        <p>Address: 123 Green Street, Cityville</p>
+    </div>
+
+    <!-- Collection Details Table -->
+    <table class="invoice-table">
+        <tr>
+            <th>SNo</th>
+            <th>Waste Type</th>
+            <th>Unit</th>
+            <th>Quantity</th>
+            <th>Rate</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Plastic</td>
+            <td>kg</td>
+            <td>5</td>
+            <td>$2.00</td>
+            <td>$10.00</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Glass</td>
+            <td>kg</td>
+            <td>3</td>
+            <td>$1.50</td>
+            <td>$4.50</td>
+        </tr>
+        <tr class="total-row">
+            <td colspan="5" style="text-align:right;">Total</td>
+            <td>$14.50</td>
+        </tr>
+    </table>
+
+    <!-- Footer Notes -->
+    <div class="footer-notes">
+        <p>Thank you for using Community Recycling System. Please keep this invoice for your records.</p>
+        <p>Contact us at support@communityrecycling.com for any questions.</p>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <button onclick="window.print()">Print Invoice</button>
+        <button>Download PDF</button>
+    </div>
+</div>
+
+</body>
+</html>
